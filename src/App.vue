@@ -1,26 +1,62 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="app">
+      <el-container >
+        <home-aside ></home-aside>
+        <el-container class="home_right">
+
+          <el-main>
+            <el-scrollbar>
+            <router-view v-slot="{Component}">
+              <keep-alive>
+                <component :is="Component" :key="$route.name"  v-if="$route.meta.keepAlive" />
+              </keep-alive>
+            </router-view>
+            </el-scrollbar>
+          </el-main>
+
+        </el-container>
+      </el-container>
+      <el-footer class="footer">
+          <h3>简约</h3>
+      </el-footer>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+
+import HomeAside from "@/views/home/childComps/HomeAside";
+import HomeHeader from "@/views/home/childComps/HomeHeader";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  name:'App',
+  data(){
+    return{
+    }
+  },
+  components:{
+    HomeAside,
+    HomeHeader,
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  /*style中引用css固定写法*/
+  @import "./assets/css/base.css";
+  .footer{
+    background-color: #2b333e;
+    width: 100%;
+    color: hsla(0,0%,100%,.5);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer div{
+
+  }
+  .el-main{
+    padding: 0;
+  }
 </style>

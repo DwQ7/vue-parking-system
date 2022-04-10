@@ -1,0 +1,8 @@
+@import "./normalize.css";
+:root{
+    /*设置变量*/
+}
+body{
+    padding: 0;
+    margin: 0;
+}
