@@ -2,6 +2,18 @@
   <div class="common-layout" >
     <home-header/>
     <home-main/>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
   </div>
 </template>
 
@@ -13,6 +25,7 @@ import todoList from "@/views/home/childComps/todoList";
 import HomeAside from "@/views/home/childComps/HomeAside";
 import HomeHeader from "@/views/home/childComps/HomeHeader";
 import HomeMain from "@/views/home/childComps/HomeMain";
+import HomeFooter from "@/components/content/homeFooter/HomeFooter";
 
 
 export default {
@@ -28,7 +41,8 @@ export default {
     todoList,
     HomeAside,
     HomeHeader,
-    HomeMain
+    HomeMain,
+    HomeFooter
   },
   created(){
 
@@ -41,7 +55,7 @@ export default {
 
 <style>
 .common-layout{
-  height: 100%;
+  /*height: 100%;*/
 }
 
 </style>

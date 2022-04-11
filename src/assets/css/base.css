@@ -1,6 +1,7 @@
 @import "./normalize.css";
 :root{
     /*设置变量*/
+    /*--el-color-primary:#f89898;*/
 }
 body{
     padding: 0;

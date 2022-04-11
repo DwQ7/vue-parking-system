@@ -7,6 +7,7 @@
       </template>
     </nav-bar>
     <router-view></router-view>
+  <div style="padding: 2rem"></div>
 </template>
 
 <script>

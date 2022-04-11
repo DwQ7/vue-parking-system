@@ -1,4 +1,5 @@
 <template>
+  <el-affix :offset="0">
   <div class="aside">
     <main-nav-bar v-on:changeOpen="changeOpen"></main-nav-bar>
     <el-menu
@@ -30,7 +31,7 @@
       </el-menu-item>
     </el-menu>
   </div>
-
+  </el-affix>
 </template>
 
 <script>
@@ -43,7 +44,7 @@ export default {
   },
   data(){
     return{
-      isCollapse:true
+      isCollapse:false
     }
   },
   methods:{
@@ -58,7 +59,7 @@ export default {
 
 <style scoped>
 .aside{
-  margin-right: -70px;
+  /*margin-right: -70px;*/
 }
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 200px;

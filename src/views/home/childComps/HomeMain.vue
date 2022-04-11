@@ -1,5 +1,4 @@
 <template>
-  <el-scrollbar>
     <div class="main_content">
       <div style="width: 50%; height: 100%">
         <el-carousel :interval="5000" arrow="always">
@@ -13,7 +12,7 @@
       </div>
     </div>
     <div class="main_footer">
-      <el-skeleton style="width: 240px; padding-right: 2rem">
+      <el-skeleton style="width: 50%; padding-right: 2rem">
         <template #template>
           <el-skeleton-item variant="image" style="width: 240px; height: 240px" />
           <div style="padding: 14px">
@@ -22,7 +21,6 @@
       </el-skeleton>
       <el-skeleton :rows="5" animated />
     </div>
-  </el-scrollbar>
 </template>
 
 <script>
@@ -42,6 +40,7 @@ export default {
 
 <style scoped>
 .main_content{
+  height: 50%;
   display: flex;
 }
 .main_footer{

@@ -23,16 +23,16 @@ export default {
     return{
       iconSize:'1.5rem',
       photoSrc:require('@/assets/images/Avert.jpg'),
-      isOpen:false
+      isOpen:true
     }
   },
   methods:{
     openInfo(){
       if(this.$store.state.isLogin){
-        this.$emit('changeOpen',this.isOpen);
-        setTimeout(()=>{
-          this.isOpen = !this.isOpen
-        },200)
+        // this.$emit('changeOpen',this.isOpen)
+        // setTimeout(()=>{
+        //   this.isOpen = !this.isOpen
+        // },200)
       }else{
         this.$router.replace('/account')
       }
@@ -53,16 +53,16 @@ export default {
   display: grid;
   grid-template-columns: 4rem 1fr 3rem;
 }
-.setting{
-  text-align: right;
-}
-.icon{
-  padding-top: 10px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  align-items: center;
-  justify-items: center;
-}
+/*.setting{*/
+/*  text-align: right;*/
+/*}*/
+/*.icon{*/
+/*  padding-top: 10px;*/
+/*  display: grid;*/
+/*  grid-template-columns: 1fr 1fr 1fr 1fr;*/
+/*  align-items: center;*/
+/*  justify-items: center;*/
+/*}*/
 .icon div span{
   font-size: 0.8rem;
   align-items: center;

@@ -1,4 +1,5 @@
 <template>
+  <el-affix :offset="0">
   <div class="header">
     <div class="header_tittle">
       <span>
@@ -18,6 +19,7 @@
       </div>
     </div>
   </div>
+  </el-affix>
 </template>
 
 <script>
@@ -42,11 +44,14 @@ export default {
 
 <style scoped>
 .header{
+  position: sticky;
+  top:0;
+  background-color: var(--el-color-white);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0 1rem 0;
-  box-shadow: 0 3px 12px #e8e8e8;
+  box-shadow: 2px 1px 2px 0 #e8e8e8;
   margin-bottom: 1rem;
 }
 .header_tittle{

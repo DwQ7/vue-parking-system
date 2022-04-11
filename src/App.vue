@@ -3,23 +3,20 @@
       <el-container >
         <home-aside ></home-aside>
         <el-container class="home_right">
-
           <el-main>
-            <el-scrollbar>
-            <router-view v-slot="{Component}">
-              <keep-alive>
-                <component :is="Component" :key="$route.name"  v-if="$route.meta.keepAlive" />
-              </keep-alive>
-            </router-view>
-            </el-scrollbar>
+              <router-view v-slot="{Component}">
+                <keep-alive>
+                  <component :is="Component" :key="$route.name"  v-if="$route.meta.keepAlive" />
+                </keep-alive>
+              </router-view>
           </el-main>
-
         </el-container>
       </el-container>
       <el-footer class="footer">
-          <h3>简约</h3>
+        <h3>简约</h3>
       </el-footer>
     </div>
+
 </template>
 
 <script>
@@ -46,7 +43,7 @@ export default {
   @import "./assets/css/base.css";
   .footer{
     background-color: #2b333e;
-    width: 100%;
+    /*width: 100%;*/
     color: hsla(0,0%,100%,.5);
     font-size: 12px;
     display: flex;

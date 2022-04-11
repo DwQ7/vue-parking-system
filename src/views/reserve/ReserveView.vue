@@ -11,6 +11,8 @@
   <ReserveItem/>
   <ReserveItem/>
   <ReserveItem/>
+  <ReserveItem/>
+  <ReserveItem/>
   <div class="reserve_footer">
     <el-pagination
         :page-size="20"

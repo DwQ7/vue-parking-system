@@ -14,10 +14,10 @@ export default {
 
 <style>
 .nav-bar{
+  position: sticky;
   display: grid;
   grid-template-columns: 25% 1fr 100px 5rem;
   height: 100px;
-  /*position: fixed;*/
   top:0;
   left: 0;
   right: 0;
